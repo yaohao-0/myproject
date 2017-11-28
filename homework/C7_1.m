@@ -1,0 +1,14 @@
+clc,clear,close all;
+I=[1 1 1 0 0;
+    1 1 1 0 0;
+    1 1 1 0 0;
+    1 1 1 0 0;
+    1 1 1 0 0];
+A=[-1 0 1;
+   -2 0 2;
+   -1 0 1];
+B=[0 1 2;
+   -1 0 1;
+   -2 -1 0];
+I_A=imfilter(I,A,'conv',0,'same');
+I_B=imfilter(I,B,'conv',0,'same');
