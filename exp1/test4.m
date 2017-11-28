@@ -1,0 +1,16 @@
+close all;clear all;clc;
+i=imread('art.jpg');
+i=double(rgb2gray(i));
+gx=[-1 0 1;
+    -1 0 1;
+    -1 0 1];
+gy=[-1 -1 -1;
+    0 0 0;
+    1 1 1];
+Ix=conv2(i,gx);
+Iy=conv2(i,gy);
+I=Ix+Iy;
+figure;subplot(2,2,1),imshow(i,[]),title('原图');
+subplot(2,2,2),imshow(Ix,[]),title('x方向梯度');
+subplot(2,2,3),imshow(Iy,[]),title('y方向梯度');
+subplot(2,2,4),imshow(I,[]),title('合成梯度图');

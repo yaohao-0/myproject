@@ -1,0 +1,17 @@
+close all;clear all;clc;
+i=imread('art.jpg');
+i=rgb2gray(i);
+I=imnoise(i,'gaussian');
+subplot(2,2,1),imshow(i),title('Original Image');
+subplot(2,2,2),imshow(I),title('Noisy Image');
+H1=1/10*[1 1 1;
+         1 2 1;
+         1 1 1];
+H2=1/273*[1 4 7 4 1;
+          4 16 26 16 4;
+          7 26 47 26 7;
+          4 16 26 16 4;
+          1 4 7 4 1];
+I1=conv2(double(I),H1);I2=conv2(double(I),H2);
+subplot(2,2,3),imshow(I1,[]),title('Filtering Image with average');
+subplot(2,2,4),imshow(I2,[]),title('Filtering Image with gaussian');
