@@ -5,6 +5,7 @@ f=rgb2gray(f);
 b=max(max(f));
 a=min(min(f));
 [m,n]=size(f);
+g=zeros(m,n);
 for i = 1:m
     for j = 1:n
         g(i,j)=(0.78/(b-a))*(f(i,j)-a)+0;
