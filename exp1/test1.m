@@ -1,7 +1,6 @@
 close all;clear all;clc;
-f=imread('art.jpg');
+f=imread('lux.jpg');
 f=im2double(f);
-f=rgb2gray(f);
 b=max(max(f));
 a=min(min(f));
 [m,n]=size(f);
@@ -18,4 +17,3 @@ subplot(2,2,4)
 x=0:0.0005:1;
 y=0.78.*(x>=a)+0.78./(b-a).*(x-a).*(x>=a&b>=x)+0.*(a>=x);
 plot(x,y)
-imwrite(g,'image','jpg');

@@ -1,6 +1,5 @@
 close all;clear all;clc;
-i=imread('art.jpg');
-i=rgb2gray(i);
+i=imread('lux.jpg');
 I=imnoise(i,'gaussian');
 subplot(2,2,1),imshow(i),title('Original Image');
 subplot(2,2,2),imshow(I),title('Noisy Image');

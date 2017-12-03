@@ -1,5 +1,5 @@
  clear,clc,close all;
-i=im2double(rgb2gray(imread('image.jpg')));
+i=im2double(imread('lena512.jpg'));
 [M,N]=size(i);
 
 %加入运动模糊

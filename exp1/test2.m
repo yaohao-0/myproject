@@ -1,6 +1,5 @@
 close all;clear all;clc;
-f=imread('art.jpg');
-f=rgb2gray(f);
+f=imread('lux.jpg');
 subplot(2,2,1);imshow(f)
 subplot(2,2,2);imhist(f)
 f=double(f);

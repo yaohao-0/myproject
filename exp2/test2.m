@@ -1,5 +1,5 @@
 clear,clc,close all;
-f=rgb2gray(imread('1.jpg'));%读取图片
+f=imread('lux.jpg');%读取图片
 F=imnoise(f,'gaussian',0,0.02);%添加高斯噪声
 h=fspecial('gaussian',9,2);%生成高斯滤波器
 i=imfilter(F,h,'conv','replicate','same');%空域滤波

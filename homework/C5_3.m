@@ -1,5 +1,5 @@
 clear,clc,close all;
-I=im2double(rgb2gray(imread('art.jpg')));
+I=im2double(imread('cytus.jpg'));
 [M,N]=size(I);
 PSF=fspecial('motion',100,45);%生成点扩展函数
 %空域滤波
