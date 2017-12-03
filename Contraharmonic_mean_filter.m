@@ -8,7 +8,7 @@ clear all; close all; clc;
 
 %% 逆谐波均值滤波器-----Q--阶数，为正可以消除胡椒噪声，为负可以消除盐粒噪声。
 
-f = imread('Fig0508(b)(circuit-board-salt-prob-pt1).tif');
+f = imread('images/Fig0508(b)(circuit-board-salt-prob-pt1).tif');
 % f = imread('Fig0508(a)(circuit-board-pepper-prob-pt1).tif');
 f = im2double(f);
 subplot(1,2,1),imshow(f),title('Original Image');

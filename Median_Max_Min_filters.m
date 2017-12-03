@@ -5,7 +5,6 @@ clear all; close all; clc;
 f = imread('cameraman.tif');
 f = imnoise(f,'salt & pepper',0.01);
 f = im2double(f);
-subplot(2,2,1),imshow(f),title('Original Image');
 % figure,imshow(f),title('Noisy Image');
 [m, n]=size(f);
 b1=f;b2=f;b3=f;
@@ -23,6 +22,7 @@ for i = 2:m-1
         b3(i,j)=median(s1);
     end    
 end
+subplot(2,2,1),imshow(f),title('Original Image');
 subplot(2,2,2),imshow(b1),title('Min filter');
 subplot(2,2,3),imshow(b2),title('Max filter');
 subplot(2,2,4),imshow(b3),title('Median filter');

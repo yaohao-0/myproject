@@ -5,7 +5,7 @@
 clear all; close all; clc;
 
 %% 几何均值滤波器
-f = imread('Fig0507(b)(ckt-board-gauss-var-400).tif');
+f = imread('images/Fig0507(b)(ckt-board-gauss-var-400).tif');
 f = im2double(f);
 subplot(1,2,1),imshow(f),title('Original Image');
 [m, n]=size(f);
